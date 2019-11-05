@@ -1,4 +1,4 @@
-# Challenge1
+# BrainGame
 This is the Day25's milestorn challenge project.
 
 ## Summaries the techniques of projects 1-3
