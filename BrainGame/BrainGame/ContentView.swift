@@ -22,7 +22,15 @@ struct ContentView: View {
     @State private var result = ""
     @State private var randomSelect = 0
     @State private var totalScore = 0
-    @State private var decrement = 10
+    @State private var decrement = 10 {
+        didSet {
+            guard decrement == 0 else { return }
+
+            randomSelect = 0
+            totalScore = 0
+            decrement = 10
+        }
+    }
 
     var body: some View {
 
@@ -48,38 +56,38 @@ struct ContentView: View {
             }
 
         }.alert(isPresented: $showingScore) {
-            let title: String
-            let message: String
-            let dismissButtonTitle: String
-            if self.decrement == 0 {
-                title = "Game Over!"
-                message = "Your total score is " + String(totalScore)
-                dismissButtonTitle = "Reset"
-            } else {
-                title = scoreTitle
-                message = "You are .." + result
-                dismissButtonTitle = "Continue"
-            }
-            return Alert(title: Text(title), message: Text(message), dismissButton: .default(Text(dismissButtonTitle)) {
-                self.askQuestion(needClear: self.decrement == 0)
-            })
+            return makeAlert(decrement: decrement, resultMessage: result, totalScore: String(totalScore), scoreTitle: scoreTitle)
         }
+
     }
 
     func tapped(_ number: Int) {
         randomSelect = Int.random(in: 1 ..< choices.count)
         result = getMessage(from: choices[number], randomSelected: choices[randomSelect])
         showingScore = true
-        decrement -= 1
     }
 
-    func askQuestion(needClear: Bool = false) {
-        shouldWin  = Bool.random()
-        guard needClear else { return }
+    func makeAlert(decrement: Int, resultMessage: String, totalScore: String, scoreTitle: String) -> Alert {
+        let title: String
+        let message: String
+        let dismissButtonTitle: String
+        if decrement == 0 {
+            title = "Game Over!"
+            message = "Your total score is " + totalScore
+            dismissButtonTitle = "Reset"
+        } else {
+            title = scoreTitle
+            message = "You are .." + resultMessage
+            dismissButtonTitle = "Continue"
+        }
+        return Alert(title: Text(title), message: Text(message), dismissButton: .default(Text(dismissButtonTitle)) {
+            self.askQuestion()
+        })
+    }
 
-        randomSelect = 0
-        totalScore = 0
-        decrement = 10
+    func askQuestion() {
+        shouldWin  = Bool.random()
+        decrement -= 1
     }
 
     func getMessage(from usersChoice: String, randomSelected: String) -> String {
