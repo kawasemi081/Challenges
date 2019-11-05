@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  BrainGame
 //
-//  Created on 2019/10/31.
+//  Created by MIsono on 2019/11/06.
 //  Copyright © 2019 misono. All rights reserved.
 //
 
