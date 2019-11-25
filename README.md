@@ -31,4 +31,19 @@ There are five key differences between structs and classes:
 
 If you use structs most of the time, switching to a class in one particular place conveys some intent: this thing is different and needs to be used differently. If you always use classes, that distinction gets lost – after all, it’s extremely unlikely you need them that often.
 
-__Tip:__ One of the fascinating details of SwiftUI is how it completely inverts how we use structs and classes. In UIKit we would use structs for data and classes for UI, but in SwiftUI it’s completely the opposite – a good reminder of the importance of learning things, even if you think they aren’t immediately useful.
+# Challenge2: An edutainment app
+
+Your goal is to build an “edutainment” app for kids to help them practice multiplication tables – “what is 7 x 8?” and so on. Edutainment apps are educational at their code, but ideally have enough playfulness about them to make kids want to play.
+
+- [Challenge detail](https://www.hackingwithswift.com/guide/ios-swiftui/3/3/challenge)
+
+#### game rule:
+
+- The player needs to select which multiplication tables they want to practice. This could be pressing buttons, or it could be an “Up to…” stepper, going from 1 to 12.
+- The player should be able to select how many questions they want to be asked: 5, 10, 20, or “All”.
+- You should randomly generate as many questions as they asked for, within the difficulty range they asked for. For the “all” case you should generate all possible combinations.
+
+## Summaries the techniques of projects 4-6
+
+- [Day35 article](https://www.hackingwithswift.com/100/swiftui/35)
+
