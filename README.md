@@ -31,7 +31,7 @@ There are five key differences between structs and classes:
 
 If you use structs most of the time, switching to a class in one particular place conveys some intent: this thing is different and needs to be used differently. If you always use classes, that distinction gets lost – after all, it’s extremely unlikely you need them that often.
 
-# Challenge2: An edutainment app
+# Challenge2: MultiplicationTables
 
 Your goal is to build an “edutainment” app for kids to help them practice multiplication tables – “what is 7 x 8?” and so on. Edutainment apps are educational at their code, but ideally have enough playfulness about them to make kids want to play.
 
