@@ -1,6 +1,7 @@
 # Challenge1: BrainGame
 This is the Day25's milestorn challenge project.
-![game_logo](https://user-images.githubusercontent.com/5071627/67927894-18a0cd80-fbfd-11e9-80fd-e29617543ca6.png)
+
+<img width="300" src="https://user-images.githubusercontent.com/5071627/67927894-18a0cd80-fbfd-11e9-80fd-e29617543ca6.png">
 
 #### game rule:
 
@@ -47,3 +48,13 @@ Your goal is to build an “edutainment” app for kids to help them practice mu
 
 - [Day35 article](https://www.hackingwithswift.com/100/swiftui/35)
 
+
+# Challenge3: 
+
+#### game rule:
+
+## Summaries the techniques of projects 7-9
+
+- [Day47 article](https://www.hackingwithswift.com/100/swiftui/47)
+
+### excerpts:
